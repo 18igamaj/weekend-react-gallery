@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios'
 import {useState,useEffect} from 'react'
+import GalleryList from '../GalleryList/GalleryList';
 
 
 function App() {
@@ -48,7 +49,7 @@ const updateLike = (id) => {
         </header>
         <p>Gallery goes here</p>
         <div className="bigDiv" >
-        
+          <GalleryList listImg = {listImg} getImages={getImages}/>
         </div>
       
       </div>

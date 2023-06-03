@@ -1,16 +1,12 @@
+import GalleryItem from "../GalleryItem/GalleryItem"
 
-
-function GalleryList() {
+function GalleryList({listImg, getImages}) {
 
     return (
         <>
         {listImg.map( image => (
-            <div key={image.id}>
-              <img src={image.path} />
-              {/* <p>{image.title}</p> */}
-              <br></br>
-              <button onClick={() => updateLike(image.id)}>Like</button>
-              <p>{image.likes} Liked</p>
+            <div >
+              <GalleryItem key={image.id} listImg={listImg} getImages={getImages} />
             </div>
           ))}</>
     )
