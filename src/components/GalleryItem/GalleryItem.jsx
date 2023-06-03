@@ -1,6 +1,7 @@
 import axios from 'axios'
 import {useState} from 'react'
-function GalleryItem({id,image,getImages}){
+import './GalleryItem.css'
+function GalleryItem({image,getImages}){
 
 const [selectDescription,setDescription] = useState()
 
@@ -37,8 +38,11 @@ const [selectDescription,setDescription] = useState()
             
             } 
               </div>
-             <button onClick={() => updateLike(image.id)}>Like</button><p>{image.likes} Liked</p>
-              </>
+              <div className='button'>
+             <button onClick={() => updateLike(image.id)}>Like</button>
+             <p className='p'>{image.likes} Liked</p>
+             </div> 
+             </>
     )
 }
 
