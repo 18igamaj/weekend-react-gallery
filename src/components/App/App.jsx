@@ -8,7 +8,6 @@ import GalleryList from '../GalleryList/GalleryList';
 function App() {
 
 const [listImg, setListImg] = useState([])
-const [selectDescription,setDescription]= useState(false)
 
 useEffect(() => {
   getImages()
@@ -25,19 +24,9 @@ const getImages = () => {
   })
 }
 
-const updateLike = (id) => {
 
-    axios.put(`/gallery/like/${id}`)
-    .then(response => {
-      console.log(`${id}`)
-      getImages()
-      
-    }).catch(err => {
-      console.log('Error on put', err)
-    })
-}
 
-// const handleDescription = () => {
+
 
 // }
 
@@ -58,12 +47,3 @@ const updateLike = (id) => {
 
 export default App;
 
-// {listImg.map( image => (
-//   <div key={image.id}>
-//     <img src={image.path} />
-//     {/* <p>{image.title}</p> */}
-//     <br></br>
-//     <button onClick={() => updateLike(image.id)}>Like</button>
-//     <p>{image.likes} Liked</p>
-//   </div>
-// ))}
