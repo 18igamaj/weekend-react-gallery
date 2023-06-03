@@ -36,10 +36,9 @@ const getImages = () => {
           <h1 className="App-title">Gallery of My Life</h1>
 
         </header>
-        <p>Gallery goes here</p>
-        <div className="bigDiv" >
+        
           <GalleryList listImg = {listImg} getImages={getImages}/>
-        </div>
+       
       
       </div>
     );

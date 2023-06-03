@@ -19,23 +19,25 @@ const [selectDescription,setDescription] = useState()
 
     return (
         <>
-        <div onClick= {() => setDescription(!selectDescription)}>
+        <div className='bigDiv' onClick= {() => setDescription(!selectDescription)}>
             {
                 selectDescription ?
                 
         ( 
                 
                 <b>  {image.description}    </b>
-        ) : 
+        ) 
+        
+        : 
         
         (
 
             <img src={image.path} /> 
         )
             
-            }
+            } 
               </div>
-              <button onClick={() => updateLike(image.id)}>Like</button><p>{image.likes} Liked</p>
+             <button onClick={() => updateLike(image.id)}>Like</button><p>{image.likes} Liked</p>
               </>
     )
 }
