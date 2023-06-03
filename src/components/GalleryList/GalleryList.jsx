@@ -5,9 +5,9 @@ function GalleryList({listImg, getImages}) {
     return (
         <>
         {listImg.map( image => (
-            <div >
-              <GalleryItem key={image.id} listImg={listImg} getImages={getImages} />
-            </div>
+           
+              <GalleryItem key={image.id} image={image} getImages={getImages} />
+            
           ))}</>
     )
 }
