@@ -25,7 +25,7 @@ router.put('/like/:id', (req, res) => {
 // GET Route
 router.get('/', (req, res) => {
 
-    const sqlText = `SELECT * FROM gallery`
+    const sqlText = `SELECT * FROM gallery ORDER BY "id"`
     pool.query(sqlText)
     .then((result) => {
         console.log('Got my stuff from the database')

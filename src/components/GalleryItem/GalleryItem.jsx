@@ -47,12 +47,10 @@ const [selectDescription,setDescription] = useState()
             
             } 
               </div>
-              <div className='button'>
-             <button onClick={() => updateLike(image.id)}>Like</button>
+              <div >
+             <button className='button' onClick={() => updateLike(image.id)}>Like</button>
              <p className='p'>{image.likes} Liked</p>
-             </div> 
-             <div>
-                <button onClick= {() => deleteImage(image.id)}>Remove</button>
+             <button className='button' onClick= {() => deleteImage(image.id)}>Remove</button>
              </div>
              </>
     )
