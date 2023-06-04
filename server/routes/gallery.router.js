@@ -55,9 +55,10 @@ router.post('/', (req,res) => {
 
 router.delete('/:id', (req,res) => {
     idToDelete = req.params.id
-    const sqlText = `DELETE FROM gallery WHERE id = $1;`
+    const sqlText = `DELETE FROM gallery
+     WHERE "id" = $1;`
 
-    pool.query(sqlText,idToDelete)
+    pool.query(sqlText,[idToDelete])
     .then((result) => {
         res.sendStatus(200)
     }).catch((err) => {

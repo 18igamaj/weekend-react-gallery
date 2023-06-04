@@ -17,6 +17,15 @@ const [selectDescription,setDescription] = useState()
         })
     }
 
+    const deleteImage = (id) => {
+        axios.delete(`/gallery/${id}`)
+        .then(response => {
+            console.log (`${id}`)
+            getImages()
+        }).catch(err => {
+            console.log('Error with axios delete', err)
+        })
+    }
 
     return (
         <>
@@ -42,6 +51,9 @@ const [selectDescription,setDescription] = useState()
              <button onClick={() => updateLike(image.id)}>Like</button>
              <p className='p'>{image.likes} Liked</p>
              </div> 
+             <div>
+                <button onClick= {() => deleteImage(image.id)}>Remove</button>
+             </div>
              </>
     )
 }
