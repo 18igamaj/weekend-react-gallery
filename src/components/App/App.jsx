@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios'
 import {useState,useEffect} from 'react'
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryForm from '../GalleryForm/GalleryForm';
 
 
 function App() {
@@ -34,8 +35,10 @@ const getImages = () => {
       <div >
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
-
+          <GalleryForm getImages={getImages}/>
         </header>
+
+
         
           <GalleryList listImg = {listImg} getImages={getImages}/>
        
