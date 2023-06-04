@@ -7,4 +7,4 @@
 //     { id: 6, path: 'images/WAMG.jpeg', description: 'Photo of Tier 2', likes: 0 }
 // ];
 
-module.exports = galleryItems;
+// module.exports = galleryItems;
